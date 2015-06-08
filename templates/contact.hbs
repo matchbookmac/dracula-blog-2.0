@@ -1,16 +1,27 @@
-<div class="container">
-  <nav class= 'navbar navbar-default' role='navigation'>
-    <ul class= "nav navbar-nav">
-      <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
-      <li>{{#link-to 'about'}}About{{/link-to}}</li>
-      <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
-    </ul>
-  </nav>
+<div class="row">
+
+  <div class="col-md-6">
 
   <h1> Contact </h1>
-   <ul>
-     <li>Phone: 1-800-WHATEVER</li>
-     <li><a href="count@WHATEVERdracula.com">count@WHATEVERdracula.com</a>.</li>
-     <li>Website:<a href="http://whateverlikebloodiscool.com">Whatever Like Blood is Cool</a></li>
-   </ul>
+    <ul>
+     <li>{{#link-to 'phone'}}Phone{{/link-to}}</li>
+      <li>{{#link-to 'email'}}Email{{/link-to}}</li>
+    </ul>
+  </div>
+
+{{#if messageSent}}
+  <p> Thank you for your message. We will ge back to you Never. Your confirmation number is {{confirmationNumber}}.</p>
+
+{{else}}
+
+  <p>Or, <a href="#" {{action 'sendMessage'}}>click here</a> to send a secret message:</p>
+
+{{/if}}
+
+
+
+
+  <div class="col-md-6">
+  {{outlet}}
+  </div>
 </div>

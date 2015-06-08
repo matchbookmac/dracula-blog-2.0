@@ -1,15 +1,15 @@
-<div class="container">
 
-  <nav class= 'navbar navbar-default' role='navigation'>
-    <ul class= "nav navbar-nav">
-      <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
-      <li>{{#link-to 'about'}}About{{/link-to}}</li>
-      <li>{{#link-to 'contact'}}contact{{/link-to}}</li>
-    </ul>
-  </nav>
+<h1>About Dracula</h1>
 
-  <h1>About Dracula</h1>
+<p> something something</p>
 
-  <p> something something</p>
 
-</div>
+<button class="btn btn-primary" {{action 'showRealName'}}> Click here to learn my real name</button>
+
+
+{{#if isPictureShowing}}
+<button class="btn btn-info" {{action 'hidePicture'}}>Hide that scary face!!!!!</button>
+<p><img src="http://www.how-to-draw-funny-cartoons.com/image-files/cartoon-dracula-8.gif" alt="A photo of Dracula"> </p>
+{{else}}
+<button class="btn btn-info" {{action 'showPicture'}}>Click here to see a picture of Dracula!</button>
+{{/if}}
