@@ -7,4 +7,5 @@ Blogger.Router.map(function() {
   });
   this.resource('recent-comments');
   this.resource('post', {path: 'posts/:post_id'}) // refers to the path of specific post
+  this.resource('new-post', {path: 'posts/new'})
 });
