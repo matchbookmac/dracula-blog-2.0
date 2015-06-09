@@ -2,7 +2,11 @@
 
 <h1>Dracula's Blog</h1>
 <ul>
-  <li><a href="#">I love Blood!</a></li>
-  <li><a href="#">I love Sun Block!</a></li>
-  <li><a href="#">I love Holy Water!</a></li>
+  {{#each}}
+    <li>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</li>
+    <!-- links to individual posts throught the array -->
+  {{/each}}
+
 </ul>
+
+<button class="btn btn-primary" {{action 'sortByTitle'}}>Sort Posts by Title</button>
