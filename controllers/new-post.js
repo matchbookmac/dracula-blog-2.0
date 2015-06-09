@@ -8,6 +8,8 @@ Blogger.NewPostController = Ember.Controller.extend({
 
       this.transitionToRoute('posts');
       newPost.save();
+      this.set('title', "");
+      this.set('body', "");
     }
   }
 });
