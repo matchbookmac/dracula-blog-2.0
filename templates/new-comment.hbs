@@ -1,0 +1,8 @@
+<form>
+  <div class="form-group">
+    <label for="text">Your Thoughts</label>
+    {{textarea value=text id="text" class="form-control" rows="4"}}
+  </div>
+
+  <button class="btn btn-success" {{action 'save'}}>Add Comment</button>
+</form>
